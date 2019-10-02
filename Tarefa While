@@ -1,240 +1,217 @@
 Thalis Rebouças
 
-a)
+1)
 #include <stdio.h>
-
-int main(void) {
-	int x,y;
-		printf("digite um valor para x\n");
-		scanf("%d",&x);
-	
-		printf("digite um valor para y\n");
-		scanf("%d",&y);
-
-		if (y == x)
-		printf("eles tem mesmo valor");
-		
-		else 
-			if (x>y)
-			printf("x é maior que y");
-			else 
-			printf("y é maior que x");
-
-  return 0;
-}
-b)
-#include <stdio.h>
-
-int main(void) {
-	float x,y,z;
-		printf("digite um valor para x\n");
-		scanf("%f",&x);
-	
-		printf("digite um valor para y\n");
-		scanf("%f",&y);
-
-		printf("digite um valor para z\n");
-    scanf("%f",&z);
-
-		
-
-		if (y > x && y > z)
-		printf("y é o maior");
-		
-		else 
-			if (x > y && x >z)
-			printf("x é maior ");
-			else 
-			printf("z é maior ");
-
-  return 0;
-}
-c)
-#include <stdio.h>
-
-int main(void) {
-    float a, b, c;
-		    printf("digite um valor : \n ");
-        scanf("%f", &a);
-				printf("digite um valor : \n ");
-        scanf("%f", &b);
-				printf("digite um valor : \n ");
-        scanf("%f", &c);
-        if (a > b)                                            
-           if (b > c) printf("A mediana é %f\n",  b);        
-           else                                              
-               if (a > c) printf("A mediana é %f\n",c);    
-             else printf("A mediana é %f\n", a);          
-       else                                                 
-         if (b > c)                                        
-              if (a > c) printf("A mediana é %f\n", a);   
-               else printf("A mediana é %f\n", c);         
-           else printf("A mediana é %f\n",b);
-  return 0;
-}
-d)
-#include <stdio.h>
-
+#include<stdlib.h>
 #include <math.h>
 
-int main(void) {
-int a,A,b,B,c,C,x1,x2,delta,opcao;
+int main() { 
+int idade, cont=0, soma=0, maior, menor; 
+printf("Informe a idade,caso queira finalizar digite 0 para encerrar : "); 
+scanf("%d", &idade); 
+while (idade != 0) { 
+cont++; 
+soma += idade; 
+if (cont == 1) 
+menor = maior = idade; 
+else { 
+if (maior < idade) 
+maior = idade; 
+if (menor > idade) 
+menor = idade; 
+} 
+printf("Informe a idade,caso queira finalizar digite 0 para encerrar : "); 
+scanf("%d", &idade); 
+} 
+if (cont > 0) { 
+printf("Número de pessoas: %d\n", cont); 
+printf("Idade média do grupo: %.1f\n", (float) soma /cont); 
+printf("Menor idade: %d\nMaior idade: %d\n", maior, menor); 
+} 
+else 
+printf("Não foi informada nenhuma idade\n"); 
+return 0; 
+}
 
-     
- printf("Digite o valor de a: \n");
-    
-  scanf("%i",&a);
-     
- printf("\n\nDigite o valor de b: \n");
-   
-   scanf("%i",&b);
+2)
+#include <stdio.h>
+#include<stdlib.h>
+#include <math.h>
 
-      printf("\n\nDigite o valor de c: \n");
- 
-     scanf("%i",&c);
+int main(void){
+int n_1, n_2, n1, n2, soma = 0, i = 0;
+printf("Digite o primeiro número: ");
+scanf(" %d", &n1);
+printf("Digite o segundo número: ");
+scanf(" %d", &n2);
 
+if(n1 < n2){
+  n_1 = n1;
+  n_2 = n2;
+}
 
-       printf("Sua equacao: %ix^2 + %ix + %i = 0\n", a, b, c);
+else{
+  n_1 = n2;
+  n_2 = n1;
+}
+printf("Soma: ");
+while (i != n_1){
+  soma = soma + n_2;
+  printf("+ %d ",n_2);
+i = i + 1;
+}
+printf("= %d", soma);
+}
 
-
-
-
-         delta=b*b-4*a*c;
-
-        
- printf("\n\nO delta é: %i\n",delta);
-
-
-            
- if (delta<0)
-             {
-             
-printf("\nNao e possivel extrair a raiz deste numero\n\n");
-
-         }
-            
-
- else
+experimento :
 
 
+#include <stdio.h>
+#include<stdlib.h>
+#include <math.h>
 
-     {
-     x1 = ((-B) + sqrt(delta))/(2*(a));
-     x2 = ((-B) - sqrt(delta))/(2*(a));
+int main(void){
+int n_1, n_2, n1, n2, soma = 0, i = 0;
+printf("Digite o primeiro número: ");
+scanf(" %d", &n1);
+printf("Digite o segundo número: ");
+scanf(" %d", &n2);
 
+if(n1 < n2){
+  n_1 = n1;
+  n_2 = n2;
+}
+
+else{
+  n_1 = n2;
+  n_2 = n1;
+}
+printf("Soma: ");
+while (i != n_1);{
+  soma = soma + n_2;
+  printf("+ %d ",n_2);
+i = i + 1;
+}
+printf("= %d", soma);
+}
+
+Ao fazer isso é gerado um erro ,pois o computador entendi que nesse algorimitimo que ";" é para parar e o comando while é para continuar assim travando o programa.
+
+#include <stdio.h>
+int main(void)
+{
+  int i;
+    for(i = 1; i < 21; i++)
+  {
+    if (i % 2 == 0) 
+    {
+     continue;
     }
-
+    else 
+    {
+      printf("Número: %d \n",i );
+    }
     
-printf("x1: %d\n e x2: %d\n",x1,x2);
+    printf("Número impar!\n\n");
+  {
+		break;
+	}
+  }
   
-return 0;
-
-}
-
-e)
-#include <stdio.h>
-#include <math.h>
-int main(void) {
-float a,b,c;
-	printf("Digite sua nota\n");
-	scanf("%f",&a);
-	 if(a>=7)
-			printf("Parabens, você esta aprovado");
-		else
-		 if (7>a && a>=4)
-		 		printf("vá estudar, você esté de AF !");
-				else
-				printf("vá estudar, você esté reprovado !");
+  printf("Final do programa!\n\n");
+  
   return 0;
 }
 
-experimento 
+Esse é um programa com erro de sintaxe ,pois ao colocar o continue o programa segue e ao colocar o break ele pula direto ao ponto do break assim deixando de printar os números e encerando o programa .
+
+
+programas que compilam :
 
 #include <stdio.h>
-#include <math.h>
-int main(void) {
-float a;
-	printf("Digite sua nota\n");
-	scanf("%f",&a);
-		(a>=7)
-			printf("Parabens, você esta aprovado");
-		(a!=7)
-			printf("vá estudar, você esta reprovado!");
-			  return 0;
-}
+#include <stdlib.h>
 
-ele nao considera um algoritimo, logo ele executa.
-
-
-
-#include <stdio.h>
-#include <math.h>
-int main(void) {
-	int x,y;
-		printf("digite um valor para x\n");
-		scanf("%d",&x);
-	
-		printf("digite um valor para y\n");
-		scanf("%d",&y);
-
-		if (y = x)
-		printf("eles tem mesmo valor");
-		
-		else 
-			if (x>y)
-			printf("x é maior que y");
-			else 
-			printf("y é maior que y");
+int main () {
+    int num , quad; 
+  printf("Digite um número para saber seu quadrado ,caso queira encerra digite zero :\n");
+  scanf("%d", &num);
+  while (num != 0) 
+	    {
+      quad = num * num ;
+      printf ("O quadrado de %d = %d\n", num, quad);
+      scanf("%d", &num);
+    }
   return 0;
 }
-ele transformas a variacel x para que tenha mesmo valor que y entendendo que sempre serao iguais.
-
 #include <stdio.h>
-#include <math.h>
-int main(void) {
-	int x,y;
-		printf("digite um valor para x\n");
-		scanf("%d",&x);
-	
-		printf("digite um valor para y\n");
-		scanf("%d",&y);
+#include <stdlib.h>
 
-		if (y = x);
-		printf("eles tem mesmo valor");
-		
-		else 
-			if (x>y);
-			printf("x é maior que y");
-			else 
-			printf("y é maior que y");
+int main () {
+    int num , quad; 
+  printf("Digite um número para saber seu quadrado ,caso queira encerra digite zero :\n");
+  scanf("%d", &num);
+  while (num != 0) 
+	    {
+      quad = num * num ;      printf ("O quadrado de %d = %d\n", num, quad);     scanf("%d", &num);
+    }
   return 0;
 }
-ele considera como algo finalizado nao rodando o if
-
-
 #include <stdio.h>
-#include <math.h>
-int main(void) {
-	int x,y;
-		printf("digite um valor para x\n");
-		scanf("%d",&x);
-	
-		printf("digite um valor para y\n");
-		scanf("%d",&y);
+#include <stdlib.h>
 
-		if (y =
-		= x);
-		printf("eles tem mesmo valor");
-		
-		else 
-			if 
-			(x>y)
-			printf("x é maior que y");
-			else 
-			printf("y é maior que y");
+int main () {
+    int num , quad; 
+  printf("Digite um número para saber seu quadrado ,caso queira encerra digite zero :\n");
+  scanf("%d", &num);
+  while (num != 0) 
+	    {quad = num * num ;printf ("O quadrado de %d = %d\n",num, quad);scanf("%d", &num);
+    }
   return 0;
 }
-o computador alega ter excedeu  a expressão inviabilizando a leitura
+#include <stdio.h>
+#include <stdlib.h>
 
-não, pois else tem significado "se nao" exigindo uma hipotese antecessora
+int main () {
+    int num , quad; 
+  printf("Digite um número para saber seu quadrado ,caso queira encerra digite zero :\n");
+  scanf("%d", &num);
+  while (num != 0) 
+	    {quad   = num * num ;
+			printf ("O quadrado de %d = %d\n",num, quad);
+			scanf( "%d", & num);
+    }
+  return 0;
+}
+
+
+programas que não compilam :
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+    int num , quad; 
+  printf("Digite um número para saber seu quadrado ,caso queira encerra digite zero :\n");
+  scanf("%d", &num);
+  while (num != 0) 
+	    {
+      quad = num * num ;      printf ("O quadrado de %d = %d\n"num, quad);     scanf("%d", &num);
+    }
+  return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+    int num , quad; 
+  printf("Digite um número para saber seu quadrado ,caso queira encerra digite zero :\n");
+  scanf("%d", &num);
+  while (num ! = 0) 
+	    {quad   = num * num ;
+			printf ("O quadrado de %d = %d\n",num, quad);
+			scanf( "%d", & num);
+    }
+  return 0;
+}
+
+
 
