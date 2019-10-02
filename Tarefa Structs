@@ -1,0 +1,85 @@
+Thalis Rebouças
+
+1)
+#include <stdio.h>
+struct time{
+	int horas,minutos,segundos;
+	} ;
+
+
+int main(void){
+int a,b,c;
+printf("Digite a hora :");
+scanf("%d",&a);
+printf("Digite os minutos :");
+scanf("%d",&b);
+printf("Digite a segundos :");
+scanf("%d",&c);
+
+struct time agora;
+agora.horas = a;
+agora.minutos = b;
+agora.segundos = c ;
+
+printf("%d:%d:%d",agora.horas,agora.minutos,agora.segundos);
+
+return 0 ;
+
+}
+
+2)
+#include <stdio.h>
+struct time{
+	int horas,minutos,segundos;
+	} ;
+
+
+int main(void){
+int a,b,c,x;
+printf("Digite a hora :");
+scanf("%d",&a);
+printf("Digite os minutos :");
+scanf("%d",&b);
+printf("Digite a segundos :");
+scanf("%d",&c);
+
+struct time agora;
+agora.horas = a;
+agora.minutos = b;
+agora.segundos = c ;
+
+x = 3600*a + b*60 + c ;
+
+printf("%d:%d:%d\n",agora.horas,agora.minutos,agora.segundos);
+printf("%d\n",x);
+
+return 0 ;
+
+}
+
+3)
+#include <stdio.h>
+struct time{
+	int horas,minutos,segundos;
+	} ;
+
+int main(void){
+int a,b,c;
+int x,y ;
+printf("Digite os segundos :");
+scanf("%d",&c);
+x= 3600;
+a= (c/3600);
+b = (c-(x*a))/60;
+c = (c-(x*a)-(b*60));
+
+struct time agora;
+agora.horas = a;
+agora.minutos = b;
+agora.segundos = c ;
+
+printf("%d:%d:%d\n",agora.horas,agora.minutos,agora.segundos);
+
+return 0 ;
+
+}
