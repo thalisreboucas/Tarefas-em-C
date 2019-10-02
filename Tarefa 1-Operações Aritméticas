@@ -1,0 +1,219 @@
+Thalis Rebouças
+
+a)
+#include <stdio.h>
+int main(void) {
+ float a = 1;
+ float b = 2;
+ float m = (a/b);
+  printf("resultado da divisão real %f/%f = %f ",a,b,m);
+}
+
+\\b)
+#include <stdio.h>
+int main(void) {
+ int a = 1;
+ int b = 2;
+ int m = (a/b);
+  printf("resultado da divisão inteiro %d/%d = %d ",a,b,m);
+}
+
+\\c)
+#include <stdio.h>
+int main(void) {
+ int a = 1;
+ int b = 2;
+ int m = a % b;
+  printf("resultado do resto da divisão  %d/%d = %d ",a,b,m);
+}
+
+\\d)
+#include <stdio.h>
+int main(void) {
+ int a = 200;
+ int b = 10;
+ int m = (a / b) % 4 ;
+  printf("resultado do resto da divisão  %d/%d = %d  ",a,b,m);
+}
+
+\\e)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+ int a= pow (5,2);
+ int b = 3;
+ int m = (a + b)  ;
+  printf("resultado da soma  %d+%d = %d  ",a,b,m);
+}
+
+\\f)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+ int a = 6;
+ int b = 19;
+ int m = (a + b - 23 )  ;
+  printf("resultado soma  %d+%d = %d  ",a,b, m);
+}
+
+\\g)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+ float a = 3.0 ;
+ float b = 5.0 ;
+ float m = (a * b) + 1 ;
+  printf("resultado multiplicação  %f * %f = %f  ",a,b, m);
+}
+\\h)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+ float a = 1 ;
+ float b = 4 ;
+ float m = (a / b) + 2 ;
+  printf("resultado   %f  ", m);
+}
+\\i)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+ float a = 29.0 ;
+ float b = 7 ;
+ float m = (a / b) + 4 ;
+  printf("resultado   %f  ", m);
+}
+\\j)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+ float a = 3 ;
+ float b = 6.0 ;
+ float m = (a / b) - 7 ;
+  printf("resultado   %f  ", m);
+}
+
+\\k)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+ int a = 2 ;
+ int b = 6 ;
+ int c = 3 ;
+ int d=  4 ;
+ int e = 8   ;
+ int f = 4   ;
+ 
+ int s1 = a + b/c ;
+ int s2 = d - e/f  ;
+
+float x =s1/s2 ;
+	
+	printf("resultado   %f  ", x);
+}
+\\l)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+ int x = 2;
+ float s1 = ((pow(2*x,2) - pow (3*x,x+1) )/2 )+ ( sqrt(x+1)/x );
+ float y = s1/pow(2, x) ;
+
+ printf("restuldado %f" ,y );
+}
+\\ m)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+ float x =2 + 3 * ( 23 - 12 + ( ( ( 123 / 34 ) + 10 ) / 2 - 1 * ( 45 - 12 ) ) / 3 ) ;
+
+printf("%f" ,x) ;
+}
+\\n)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+float x =  pow (pow (2 * 3,2)- 1 ,4 );
+printf("%f" ,x) ;
+}
+\\o)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+float x = ( 2 + (( 2 * 3) - pow( 4/20 ,2 )) )/ (10 * ( pow ( 7 *3 - 2 ,3 )))  ;
+printf("%f",x) ;
+}
+\\p)
+#include <stdio.h>
+#include <math.h>
+int main(void) { 
+int a=1; 
+int b=2;
+int f=-1;
+int x=(sqrt((2*b)-(4*a))+(2*(pow(f,-3))))/3-(2*a);
+printf(" %d ", x); 
+}
+
+\\q)
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(void) {
+	float x = 2;
+	float H = 1;
+	float y = 2*H-pow(((45/3*x)-4*H*(3-H)),2*H);
+	printf("%f\n", y);
+	return 0;
+}
+
+
+\\r)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+int a = 1 ;
+int b = 2 ;
+int c = 3 ;
+int d=  5 ;
+int e = 1 ;
+int f = 3 ;
+float g = 2.5 ;
+int h = 12 ;
+int i = 5 ;
+float j = 0.5 ;
+float x = (a - b) +(e+f) /(c -d) + (g+h)* (i/j);
+printf("%f ",x );
+}
+#include <stdio.h>
+int main(void) {
+ float a = 1;
+ float b = 2;
+ float m = (a/b);
+   printf("resultado da divisão real %f/%f = %f ",a,b,m);
+	 printf("resultado da divisão inteiro  %d ",m);
+
+ int x = 1;
+ int y = 2;
+ int d = (a/b);
+  printf("resultado da divisão inteiro %d/%d = %d ",x,y,d);
+ printf("resultado da divisão inteiro  %f ",d);
+
+ int e = 1;
+ float r = 2;
+ printf("resultado da divisão inteiro %d",e/r);
+ printf("resultado da divisão inteiro  %f ",e/r);
+
+ float u = 1;
+ int i = 2;
+ printf("resultado da divisão inteiro %d ",u/i);
+ printf("resultado da divisão inteiro  %f ",u/i);
+}
+
+
+// No comando "int" o computador entende que é um número inteiro e que não tem casas decimais , 
+já no float haverá casa decimais ,mas o importante é definir no printf qual saída vou querer , mas vai gerar um erro.
+
+
+
+
