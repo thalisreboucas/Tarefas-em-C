@@ -1,0 +1,29 @@
+Thalis Rebouças
+
+
+1)
+#include <stdio.h>
+    
+    int main(void)
+    {
+        int cont, n, i;
+			printf("digite um numero :");
+       scanf("%d", &n);
+        cont = 1;
+       for (i = 1; i <= n; i = i+1) cont *= i;
+        printf("%d\n", cont);
+       return 0;
+   }
+2)
+#include <stdio.h>
+    
+int main(void)
+{int cont=0, n, i;
+
+printf("digite um numero :");
+scanf("%d", &n);
+while (n != 0){ n /= 2 ;	cont++;}
+printf("%d",cont);
+return 0;
+}
+
