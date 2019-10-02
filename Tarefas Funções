@@ -1,0 +1,219 @@
+Thalis Rebouças
+
+1)
+#include <stdio.h>
+#include <math.h>
+
+void positivo(int valor){
+   if(valor >0 ){ 	printf("é positivo :%d",valor);
+   
+	}else {printf("é negativo : %d ",valor);
+  }
+
+}
+int main(void) {
+  int valor,i,b;
+ 
+  printf("digite um numero:");
+	scanf("%d",&valor);
+  
+	positivo(valor);
+	
+  return 0;
+}
+
+2)
+#include <stdio.h>
+#include <math.h>
+
+  
+int maior(int valor1,int valor2){
+   if(valor1 > valor2 ){ 
+   return valor1 ;
+	}else {
+			return  valor2 ;
+  }
+
+}
+int main(void) {
+  int valor1,valor2,b;
+ 
+  printf("digite um numero:");
+	scanf("%d",&valor1);
+
+	printf("digite um numero:");
+	scanf("%d",&valor2);
+  
+	b = maior(valor1,valor2); 
+	printf("O maior é : %d",b);
+	
+  return 0;
+}
+
+3)
+#include <stdio.h>
+#include <math.h>
+
+int ehprimo(int x)
+  {
+    for (int i=2; i<=sqrt(x); i++)  
+      {
+        if(x%i==0){return 0;}
+      
+      }
+      
+      return 1;
+  }
+
+int main(void) {
+  int valor,a;
+  printf("Digite um valor: \n");
+  scanf("%d",&valor);
+  a = ehprimo(valor) ;
+	printf("%d",a);
+
+
+  
+ 
+  return 0;
+}
+
+experimentação 
+
+#include <stdio.h>
+#include <math.h>
+
+int ehprimo(int x)
+  {
+    for (int i=2; i<=sqrt(x); i++)  
+      {
+        if(x%i==0){}
+      
+      }
+      
+      
+  }
+
+int main(void) {
+  int valor,a;
+  printf("Digite um valor: \n");
+  scanf("%d",&valor);
+  a = ehprimo(valor) ;
+	printf("%d",a);
+  
+ 
+  return 0;
+}
+no teste um o programa retorna lixo de memória.
+
+
+#include <stdio.h>
+#include <math.h>
+
+  
+int maior(int valor1){
+   if(valor1 > valor2 ){ 
+   return valor1 ;
+	}else {
+			return  valor2 ;
+  }
+
+}
+int main(void) {
+  int valor1,valor2,b;
+ 
+  printf("digite um numero:");
+	scanf("%d",&valor1);
+
+	printf("digite um numero:");
+	scanf("%d",&valor2);
+  
+	b = maior(valor1,valor2); 
+	printf("O maior é : %d",b);
+	
+  return 0;
+}
+
+no segundo teste ocorre um erro pois o programa não consegue rodar o programa.
+
+#include <stdio.h>
+#include <math.h>
+
+int ehprimo(float x)
+  {
+    for (float i=2; i<=sqrt(x); i++)  
+      {
+        if(x%i==0){return 0;}
+      
+      }
+      
+      return 1;
+  }
+
+int main(void) {
+  float valor,a;
+  printf("Digite um valor: \n");
+  scanf("%f",&valor);
+  a = ehprimo(valor) ;
+	printf("%f",a);
+  
+ 
+  return 0;
+}
+
+#include <stdio.h>
+#include <math.h>
+
+int ehprimo(int x)
+  {
+    for (int i=2; i<=sqrt(x); i++)  
+      {
+        if(x%i==0){return 0;}
+      
+      }
+      
+      return 1;
+  }
+
+int main(void) {
+  int valor,a;
+  printf("Digite um valor: \n");
+  scanf("%f",&valor);
+  a = ehprimo(valor) ;
+	printf("%f",a)
+
+gera um erro de intentação , pois o programa não reconhece o valor
+  
+ 
+  return 0;
+}
+
+#include <stdio.h>
+#include <math.h>
+
+void positivo(int valor){
+   if(valor >0 ){ 	printf("é positivo :%d",valor);
+   
+	}else {printf("é negativo : %d ",valor);
+  }
+	positivo(valor);
+
+}
+int main(void) {
+  int valor,i,b;
+ 
+  printf("digite um numero:");
+	scanf("%d",&valor);
+  
+	positivo(valor);
+	
+  return 0;
+}
+
+fica retornando ela mesmo infinitamente .
+
+
+
+ 
+  return 0;
+}
