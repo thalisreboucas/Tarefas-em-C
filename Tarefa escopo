@@ -1,0 +1,166 @@
+Thalis Rebouças
+
+1)#include <stdio.h>
+#include <math.h>
+
+  
+int soma(int a,int b){
+   int valor1= a + b;
+   return valor1 ;
+}
+
+int main(void) {
+  int valor1,a,b,c;
+ 
+  printf("digite um numero:");
+	scanf("%d",&a);
+
+	printf("digite um numero:");
+	scanf("%d",&b);
+  
+  c = soma(a,b); 
+	printf("A soma é : %d",c);
+	
+  return 0;
+}
+
+2)#include <stdio.h>
+#include <math.h>
+  
+	 int a ;
+	 int b;
+int soma(){
+	 int valor1 = a + b ;
+     return valor1 ;
+}
+
+int main(void) {
+  int valor1,c;
+ 
+  printf("digite um numero:");
+	scanf("%d",&a);
+
+	printf("digite um numero:");
+	scanf("%d",&b);
+  
+  c = soma(); 
+	printf("A soma é : %d",c);
+	
+  return 0;
+}
+
+3)#include <stdio.h>
+#include <math.h>
+  
+	 int a=1 ;
+	
+	void teste(){
+		printf("chamada %d \n",a);
+		a++ ;
+	 }
+
+int main(void) {
+  int valor1,c;
+ 
+  teste();
+	teste();
+	teste();
+	teste();
+	teste();
+	teste();
+  
+	
+  return 0;
+}
+
+4)
+#include <stdio.h>
+#include <math.h>
+  
+	void teste(){
+		static int a =1 ;
+		printf("chamada %d \n",a++);
+	 }
+
+int main() {
+ teste();
+ teste();
+ teste();
+  	
+  return 0;
+}
+
+
+experimento :
+#include <stdio.h>
+#include <math.h>
+
+int a=123;
+
+int main(void) {
+  int a;
+ 	printf("%d",a);
+	  return 0;
+}
+
+
+Não dá certo ,pois ao declara int a na varialvel local o programa chama a variavel local.
+
+#include <stdio.h>
+#include <math.h>
+
+  
+int soma(int c,int d){
+   int valor1= c + d;
+   return valor1 ;
+}
+
+int main(void) {
+  int valor1,a,b,c;
+ 
+  printf("digite um numero:");
+	scanf("%d",&a);
+
+	printf("digite um numero:");
+	scanf("%d",&b);
+  
+  c = soma(a,b); 
+	printf("A soma é : %d",c);
+	
+  return 0;
+}
+
+continua rodando o programa . 
+
+#include <stdio.h>
+#include <math.h>
+
+  
+int soma(int c,int d){
+   int valor1= c + d;
+   return valor1 ;
+}
+
+int main(void) {
+  int valor1,a,b,c,soma;
+ 
+  printf("digite um numero:");
+	scanf("%d",&a);
+
+	printf("digite um numero:");
+	scanf("%d",&b);
+  
+  c = soma + b ;
+	printf("A soma é : %d",c);
+	
+  return 0;
+}
+
+a varial com o nome recebe lixo de memória .
+
+
+
+
+
+
+
