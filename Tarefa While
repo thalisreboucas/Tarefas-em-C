@@ -1,0 +1,240 @@
+Thalis Rebouças
+
+a)
+#include <stdio.h>
+
+int main(void) {
+	int x,y;
+		printf("digite um valor para x\n");
+		scanf("%d",&x);
+	
+		printf("digite um valor para y\n");
+		scanf("%d",&y);
+
+		if (y == x)
+		printf("eles tem mesmo valor");
+		
+		else 
+			if (x>y)
+			printf("x é maior que y");
+			else 
+			printf("y é maior que x");
+
+  return 0;
+}
+b)
+#include <stdio.h>
+
+int main(void) {
+	float x,y,z;
+		printf("digite um valor para x\n");
+		scanf("%f",&x);
+	
+		printf("digite um valor para y\n");
+		scanf("%f",&y);
+
+		printf("digite um valor para z\n");
+    scanf("%f",&z);
+
+		
+
+		if (y > x && y > z)
+		printf("y é o maior");
+		
+		else 
+			if (x > y && x >z)
+			printf("x é maior ");
+			else 
+			printf("z é maior ");
+
+  return 0;
+}
+c)
+#include <stdio.h>
+
+int main(void) {
+    float a, b, c;
+		    printf("digite um valor : \n ");
+        scanf("%f", &a);
+				printf("digite um valor : \n ");
+        scanf("%f", &b);
+				printf("digite um valor : \n ");
+        scanf("%f", &c);
+        if (a > b)                                            
+           if (b > c) printf("A mediana é %f\n",  b);        
+           else                                              
+               if (a > c) printf("A mediana é %f\n",c);    
+             else printf("A mediana é %f\n", a);          
+       else                                                 
+         if (b > c)                                        
+              if (a > c) printf("A mediana é %f\n", a);   
+               else printf("A mediana é %f\n", c);         
+           else printf("A mediana é %f\n",b);
+  return 0;
+}
+d)
+#include <stdio.h>
+
+#include <math.h>
+
+int main(void) {
+int a,A,b,B,c,C,x1,x2,delta,opcao;
+
+     
+ printf("Digite o valor de a: \n");
+    
+  scanf("%i",&a);
+     
+ printf("\n\nDigite o valor de b: \n");
+   
+   scanf("%i",&b);
+
+      printf("\n\nDigite o valor de c: \n");
+ 
+     scanf("%i",&c);
+
+
+       printf("Sua equacao: %ix^2 + %ix + %i = 0\n", a, b, c);
+
+
+
+
+         delta=b*b-4*a*c;
+
+        
+ printf("\n\nO delta é: %i\n",delta);
+
+
+            
+ if (delta<0)
+             {
+             
+printf("\nNao e possivel extrair a raiz deste numero\n\n");
+
+         }
+            
+
+ else
+
+
+
+     {
+     x1 = ((-B) + sqrt(delta))/(2*(a));
+     x2 = ((-B) - sqrt(delta))/(2*(a));
+
+    }
+
+    
+printf("x1: %d\n e x2: %d\n",x1,x2);
+  
+return 0;
+
+}
+
+e)
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+float a,b,c;
+	printf("Digite sua nota\n");
+	scanf("%f",&a);
+	 if(a>=7)
+			printf("Parabens, você esta aprovado");
+		else
+		 if (7>a && a>=4)
+		 		printf("vá estudar, você esté de AF !");
+				else
+				printf("vá estudar, você esté reprovado !");
+  return 0;
+}
+
+experimento 
+
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+float a;
+	printf("Digite sua nota\n");
+	scanf("%f",&a);
+		(a>=7)
+			printf("Parabens, você esta aprovado");
+		(a!=7)
+			printf("vá estudar, você esta reprovado!");
+			  return 0;
+}
+
+ele nao considera um algoritimo, logo ele executa.
+
+
+
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+	int x,y;
+		printf("digite um valor para x\n");
+		scanf("%d",&x);
+	
+		printf("digite um valor para y\n");
+		scanf("%d",&y);
+
+		if (y = x)
+		printf("eles tem mesmo valor");
+		
+		else 
+			if (x>y)
+			printf("x é maior que y");
+			else 
+			printf("y é maior que y");
+  return 0;
+}
+ele transformas a variacel x para que tenha mesmo valor que y entendendo que sempre serao iguais.
+
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+	int x,y;
+		printf("digite um valor para x\n");
+		scanf("%d",&x);
+	
+		printf("digite um valor para y\n");
+		scanf("%d",&y);
+
+		if (y = x);
+		printf("eles tem mesmo valor");
+		
+		else 
+			if (x>y);
+			printf("x é maior que y");
+			else 
+			printf("y é maior que y");
+  return 0;
+}
+ele considera como algo finalizado nao rodando o if
+
+
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+	int x,y;
+		printf("digite um valor para x\n");
+		scanf("%d",&x);
+	
+		printf("digite um valor para y\n");
+		scanf("%d",&y);
+
+		if (y =
+		= x);
+		printf("eles tem mesmo valor");
+		
+		else 
+			if 
+			(x>y)
+			printf("x é maior que y");
+			else 
+			printf("y é maior que y");
+  return 0;
+}
+o computador alega ter excedeu  a expressão inviabilizando a leitura
+
+não, pois else tem significado "se nao" exigindo uma hipotese antecessora
+
