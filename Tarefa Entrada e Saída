@@ -1,0 +1,138 @@
+Thalis Rebouças
+
+//a)
+#include <stdio.h>
+int main(void) {
+ printf("O primeiro progrma a gente nunca esquece!");
+
+return 0 ;
+}
+
+//b)
+#include <stdio.h>
+#include <stdlib.h>
+    
+
+    int main() {
+        int x, y;
+      
+         printf("Digite um numero : ");
+         scanf("%d", &x);
+         
+				 printf("Digite um numero : ");
+         scanf("%d", &y);
+
+				 int a = x+y ;
+
+    printf("\nO valor  do numero eh : %d\n\n", a);
+        system("Pause");
+        return 0;      
+    }
+//c)
+#include <stdio.h>
+#include <stdlib.h>
+    
+
+    int main() {
+        int x, y,s;
+      
+         printf("Digite um numero : ");
+         scanf("%d", &x);
+         
+				 printf("Digite um numero : ");
+         scanf("%d", &y);
+
+				 printf("Digite um numero : ");
+         scanf("%d", &s);
+
+
+				 float a = (x+y+s)/3 ;
+
+    printf("\nO valor  do numero eh : %f\n\n", a);
+        system("Pause");
+        return 0;      
+    }
+//d)
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+    
+
+    int main() {
+        int x;
+      
+         printf("Digite o valor do raio : ");
+         scanf("%d", &x);
+
+				 float R = (pow(x,2))*M_PI ;
+
+    printf("\nO valor  do raio eh : %f\n\n", R);
+        system("Pause");
+        return 0;      
+    }
+//e)
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+    
+
+    int main() {
+        int x;
+      
+         printf("Digite o valor da temperatura em celsius : ");
+         scanf("%d", &x);
+
+				 float R = (x*1.8)+32 ;
+
+    printf("\nO temperatura em fahrenheit : %f\n\n", R);
+        system("Pause");
+        return 0;      
+    }
+//f)
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+    
+
+    int main() {
+        int x;
+      
+         printf("Digite o valor da temperatura em fahrenheit : ");
+         scanf("%d", &x);
+
+				 float R = (x-32)/1.8 ;
+
+    printf("\nO temperatura em celsius : %f\n\n", R);
+        system("Pause");
+        return 0;      
+    }
+
+Experimento
+#include <stdio.h>
+int main(void) {
+ float a = 100000;
+ float b = 200000;
+ float m = (a/b);
+   printf("resultado da divisão real %f/%f = %f\n ",a,b,m);
+	 printf("resultado da divisão inteiro  %d \n",m);
+
+ int x = 10000;
+ int y = 20000;
+ int d = (a/b);
+  printf("resultado da divisão inteiro %d/%d = %d\n ",x,y,d);
+ printf("resultado da divisão inteiro  %f \n",d);
+
+ int e = 15000;
+ float r = 2000;
+ printf("resultado da divisão inteiro %d\n",e/r);
+ printf("resultado da divisão inteiro  %f\n ",e/r);
+
+ float u = 1;
+ int i = 2;
+ printf("resultado da divisão inteiro %d\n ",u/i);
+ printf("resultado da divisão inteiro  %f\n ",u/i);
+}
+
+
+// No comando "int" o computador entende que é um número inteiro e que não tem casas decimais , já no float haverá casa decimais ,mas o importante é definir no printf qual saída vou querer , mas vai gerar um erro e o resultado vai ser 0.
+
