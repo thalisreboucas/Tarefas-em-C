@@ -1,0 +1,135 @@
+#include <stdio.h>
+#include <stdlib.h>
+    
+typedef struct {
+int n;// numerador
+int d;// denomeinador
+} Racional;
+
+Racional leia(){
+	Racional a;
+	printf("digite o númerador :");
+	scanf("%d", &a.n);
+	printf("digite o denomeinador :");
+	scanf("%d", &a.d);
+
+	while (a.d == 0){
+		printf("ERROR");
+		printf("digite o denomeinador :");
+		scanf("%d", &a.d);}
+return a;
+}
+
+Racional mult(Racional a, Racional b){
+	Racional mult;
+mult.n = (a.n) * (b.n) ;
+mult.d = (a.d) * (b.d) ;
+
+return mult;
+}
+
+Racional divi(Racional a, Racional b){
+	Racional divi;
+divi.n = (a.n) * (b.d) ;
+divi.d = (a.d) * (b.n) ;
+
+if (divi.d == 0){
+	printf("não dá");
+	
+ exit(1);
+ }
+return divi;
+}
+
+int MDC(int a, int b){
+    while(b != 0){
+        int r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+
+Racional simpl(Racional a){
+	Racional simpl;
+	int j = MDC( a.n, a.d);
+simpl.n = a.n / j ;
+simpl.d = a.d / j ;
+
+return simpl;
+}
+
+Racional soma (Racional a ,Racional b){
+	Racional soma ;
+	
+soma.n = (a.n * b.d) + (b.n * a.d) ;
+soma.d = (a.d)*(b.d); 
+simpl(soma);
+
+return soma;
+}
+Racional sub(Racional a ,Racional b){
+	Racional sub;
+	sub.n=(a.n*b.d)-(b.n*a.d);
+	sub.d = (a.d)*(b.d); 
+	simpl(sub);
+
+	return sub;
+}
+
+
+void print(Racional a){
+	printf("%d/%d\n",a.n, a.d);
+}
+
+
+int main(void)
+{ //chamando as funções
+	Racional a = leia();
+  
+	Racional b = leia();
+
+//divisão de racionais	
+Racional c =	divi(a, b);
+
+Racional d  = mult(a, b);
+
+Racional e = simpl(a);
+
+Racional o = simpl(b);
+
+Racional w =soma(a,b);
+
+Racional f = sub(a,b);
+
+printf("divisao a/b :\n");
+print(c);
+
+printf("divisao simplificada :\n");
+print(simpl(c));
+
+printf("Multiplicação: \n");
+print(d);
+
+printf("Multiplicação simplificada : \n");
+print(simpl(d));
+
+printf("simplificação de a :\n");
+print(simpl(e));
+
+printf("simplificação de b :\n");
+print(simpl(o));
+
+printf("soma de a + b:\n");
+print(w);
+
+printf("soma de a + b(c/simplificação) :\n");
+print(simpl(w));
+
+printf("subtração de a - b:\n");
+print(f);
+
+printf("subtração de a - b(c/simplificação) :\n");
+print(simpl(f));
+
+}
