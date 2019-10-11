@@ -1,0 +1,164 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<math.h>
+    
+typedef struct {
+double a; //real
+double b ; //imaginario
+} Complexo;
+
+
+Complexo leia(){
+	Complexo a; 
+		printf("digite o real:");
+		scanf("%lg", &a.a);
+   printf("digite o coeficente imaginario :");
+	scanf("%lg", &a.b);
+	return  a;
+}
+
+
+Complexo soma (Complexo a ,Complexo b){
+	Complexo soma ;
+	soma.a = (a.a + b.a);
+  soma.b = (a.b)+(b.b); 
+return soma;
+}
+
+Complexo sub(Complexo a ,Complexo b){
+	Complexo sub;
+	sub.a=(a.a - b.a);
+	sub.b = (a.b)-(b.b); 
+	return sub;
+}
+
+Complexo conjugado(Complexo a){
+  Complexo conjugado;
+	conjugado.a = a.a;
+	conjugado.b = -a.b;
+	
+return conjugado ;
+}
+
+Complexo multi(Complexo a ,Complexo b){
+	Complexo multi;
+multi.a = (a.a *b.a) - (a.b*b.b) ;
+multi.b = (a.b *b.a) + (a.a *b.b);
+return multi;
+}
+
+Complexo divi(Complexo a , Complexo c){
+	Complexo div;
+	Complexo d = conjugado(c);
+	Complexo r = multi(c, d);
+  div = multi(a, d);
+	div.a = div.a / r.a ;
+  div.b = div.b /r.a ;
+
+return div;
+}
+
+double modulo(Complexo a){
+	Complexo modulo ;
+	double f ;
+
+	modulo.a = a.a * a.a ;
+	modulo.b = a.b * a.b ;
+  f = sqrt(modulo.a + modulo.b ); 
+	return  f ;  
+}
+
+void print(Complexo a){
+	if (a.b == 0){
+		printf("%lg\n",a.a);
+		}else if (a.a != 0 && a.b == 1) {
+			printf("%lg + i\n",a.a);
+		}
+		else if (a.a != 0 && a.b == -1) {
+			printf("%lg - i\n ",a.a);
+		}
+		else if (a.a == 0){
+		if(a.b == 1){
+   printf("i \n");
+		}else {
+			printf("%lgi\n",a.b);
+		}
+			}else if(a.b < 0){
+			if (a.b == -1){
+				printf("%lg - i \n",a.a);
+			}else 
+				printf("%lg %lgi \n",a.a, a.b);
+		
+	}	else 
+		printf("%lg + %lgi \n",a.a, a.b);
+}
+
+int main(){
+Complexo a = leia();
+print(a);
+Complexo b = leia();
+print(b);
+
+printf("Soma :\n");
+Complexo mais = soma(a,b);
+print(mais);
+
+printf("subtração:\n");
+Complexo menos = sub(a,b);
+print(menos);
+
+printf("conjugado : \n");
+Complexo conj = conjugado(a);
+print(conj);
+
+printf("Multiplicação : \n ");
+Complexo c = multi(a,b);
+print(c);
+
+printf("Divisão: \n");
+Complexo d = divi(a, b);
+print(d) ;
+
+printf("Modulo : \n");
+printf("%lg",modulo(a));
+
+//Complexo a = leia();
+//print(a);
+//Complexo b = leia();
+//print(b);
+
+//Complexo c = leia();
+//print(c);
+
+//Complexo d = leia ();
+//print(d);
+
+//Complexo g =soma(divi(a,b), multi(c, d));
+//print(g);
+
+//b)
+
+//Complexo p = leia ();
+//print(p);
+
+//Complexo j = p;
+//for (i=1 ;i < 12; i++ ){
+//		j = multi(j, p);
+//	}
+//	print(j);
+
+//c)
+//Complexo a = leia();
+//print(a);
+//Complexo b = leia();
+//print(b);
+//Complexo c = leia();
+//print(c);
+//Complexo d = leia ();
+//print(d);
+
+//Complexo e = sub(multi(a,b),multi(c,d));
+
+//print(e); 
+
+
